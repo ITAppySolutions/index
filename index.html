@@ -7,7 +7,7 @@
     <style>
         :root {
             --bg-color-fallback: #0d131f;
-            --card-bg-transparent: rgba(30, 41, 59, 0.85); 
+            --card-bg-transparent: rgba(30, 41, 59, 0.88); 
             --border-color: #334155;
             --text-main: #f1f5f9;
             --text-muted: #cbd5e1;
@@ -27,7 +27,7 @@
             line-height: 1.6;
             padding: 20px;
             
-            /* --- FULL PAGE BACKGROUND IMAGE UPDATED TO jcitsupport.jpg --- */
+            /* Full Page Background Image */
             background-image: url('jcitsupport.jpg'); 
             background-size: cover;          
             background-position: center;     
@@ -37,13 +37,13 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1350px;
             margin: 0 auto;
         }
 
-        /* Hero Header with semi-transparent background */
+        /* Hero Header */
         header {
-            background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.92) 0%, rgba(15, 23, 42, 0.92) 100%);
             border: 2px solid var(--border-color);
             border-radius: 16px;
             padding: 30px 20px;
@@ -78,13 +78,36 @@
             font-weight: 600;
         }
 
+        /* Layout with Left & Right Floating Support Images */
         .main-layout {
-            display: block;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
             margin-bottom: 20px;
         }
 
-        .content-area {
+        .side-image-container {
+            flex: 0 0 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .side-image {
             width: 100%;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+            object-fit: cover;
+            background: rgba(15, 23, 42, 0.8);
+            padding: 4px;
+        }
+
+        .content-area {
+            flex: 1;
+            min-width: 0;
         }
 
         /* Services Grid */
@@ -95,7 +118,19 @@
             margin-bottom: 20px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1050px) {
+            .main-layout {
+                flex-direction: column;
+            }
+            .side-image-container {
+                width: 100%;
+                position: static;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .side-image {
+                max-width: 45%;
+            }
             .services-grid {
                 grid-template-columns: 1fr;
             }
@@ -239,6 +274,10 @@
         </header>
 
         <div class="main-layout">
+            <div class="side-image-container">
+                <img src="support02.jpg" alt="Fixing Blue Screen of Death" class="side-image" title="Blue Screen & Crash Diagnostics">
+            </div>
+
             <div class="content-area">
                 <div class="services-grid">
                     <div class="card">
@@ -339,6 +378,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="side-image-container" style="order: 3;">
+                <img src="support01.jpg" alt="Removing Computer Virus" class="side-image" title="Virus & Malware Defense">
             </div>
         </div>
 
