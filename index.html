@@ -92,7 +92,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
-        /* Makes Box 5 span the full width across the bottom, balancing the layout */
         .card.full-width {
             grid-column: 1 / -1;
         }
@@ -134,6 +133,42 @@
             color: var(--text-muted);
         }
 
+        /* Certification & Slogan Section */
+        .trust-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .trust-slogan {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .cert-logo {
+            max-height: 60px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
         /* Footer / Contact CTA */
         .footer-cta {
             background: linear-gradient(135deg, #0284c7 0%, #059669 100%);
@@ -142,7 +177,6 @@
             padding: 24px 20px;
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-            margin-top: 20px;
         }
 
         .cta-heading {
@@ -279,6 +313,16 @@
                         <div class="item-desc">Quick screen-share support for minor software issues without a house visit.</div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="trust-section">
+            <div class="trust-slogan">Quality you can rely on.</div>
+            <div class="logo-container">
+                <img src="logo1.png" alt="Certification Logo 1" class="cert-logo">
+                <img src="logo2.png" alt="Certification Logo 2" class="cert-logo">
+                <img src="logo3.png" alt="Certification Logo 3" class="cert-logo">
+                <img src="logo4.png" alt="Certification Logo 4" class="cert-logo">
             </div>
         </div>
 
