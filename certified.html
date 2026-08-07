@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is A Certified Professional? | Appalachian IT Solutions</title>
+    <style>
+        :root {
+            --bg-fallback: #0f172a;
+            --overlay-bg: rgba(15, 23, 42, 0.92);
+            --card-bg: rgba(30, 41, 59, 0.85);
+            --border-color: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #cbd5e1;
+            --accent-green: #4ade80;
+            --accent-blue: #38bdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            
+            /* Full Page Background matching main landing page */
+            background-image: url('mobo01.jpg'); 
+            background-size: cover;          
+            background-position: center;     
+            background-attachment: fixed;    
+            background-repeat: no-repeat;
+            background-color: var(--bg-fallback);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        /* Top Header Navigation & Title */
+        header {
+            background: var(--overlay-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+        }
+
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover {
+            color: var(--accent-green);
+        }
+
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            color: var(--accent-green);
+            text-transform: uppercase;
+        }
+
+        .page-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+            font-weight: 600;
+        }
+
+        /* Main Certification Breakdown Container */
+        .cert-container {
+            background: var(--overlay-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+        }
+
+        .cert-card {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .cert-card:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .cert-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .cert-badge-box {
+            flex: 0 0 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cert-badge {
+            max-width: 120px;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid var(--border-color);
+            padding: 8px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+
+        .cert-details {
+            flex: 1;
+        }
+
+        .cert-heading {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            margin-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+
+        .cert-description {
+            font-size: 0.95rem;
+            color: #f1f5f9;
+            line-height: 1.65;
+        }
+
+        /* Footer / Contact CTA */
+        .footer-cta {
+            background: linear-gradient(135deg, #0284c7 0%, #059669 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 28px 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .cta-heading {
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .cta-subtext {
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+            color: #e2e8f0;
+        }
+
+        .cta-email {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: background 0.2s;
+        }
+
+        .cta-email:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .spanish-note {
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            margin-top: 12px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <a href="index.html" class="nav-back">← Back to Main Page</a>
+            <h1 class="page-title">What Is A Certified Professional?</h1>
+            <p class="page-subtitle">Proven Industry Expertise You Can Depend On</p>
+        </header>
+
+        <div class="cert-container">
+            
+            <div class="cert-card">
+                <div class="cert-badge-box">
+                    <img src="comptia-a.png" alt="CompTIA A+" class="cert-badge">
+                </div>
+                <div class="cert-details">
+                    <h2 class="cert-heading">CompTIA A+ Certified</h2>
+                    <p class="cert-description">
+                        I help businesses and individuals keep their technology running smoothly, securely, and efficiently. As a CompTIA A+ certified professional, I have earned an industry-recognized credential that verifies my technical skills in computer hardware, software troubleshooting, network setup, and data security. Whether you need to upgrade your devices, fix a critical system error, or secure your internet connection, I bring trusted, proven expertise to every problem. I focus on delivering fast, reliable solutions so you can stay connected and focus on what matters most.
+                    </p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-badge-box">
+                    <img src="comptia-net.png" alt="CompTIA Network+" class="cert-badge">
+                </div>
+                <div class="cert-details">
+                    <h2 class="cert-heading">CompTIA Network+ Certified</h2>
+                    <p class="cert-description">
+                        I help businesses and individuals design, configure, and maintain reliable networks that keep their operations running without interruption. As a CompTIA Network+ certified professional, I possess industry-verified expertise in managing essential network infrastructure, optimizing connectivity, and troubleshooting critical hardware and software issues. From setting up secure wireless access points to ensuring data flows smoothly and safely across your devices, I deliver the technical know-how needed to keep your systems stable and secure.
+                    </p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-badge-box">
+                    <img src="comptia-sec.png" alt="CompTIA Security+" class="cert-badge">
+                </div>
+                <div class="cert-details">
+                    <h2 class="cert-heading">CompTIA Security+ Certified</h2>
+                    <p class="cert-description">
+                        I help businesses and individuals protect their digital assets, secure their systems, and defend against evolving cyber threats. As a CompTIA Security+ certified professional, I possess industry-validated expertise in identifying security risks, implementing defensive technologies, and maintaining proactive data privacy practices. From securing wireless networks and configuring firewalls to implementing safe data habits, I provide the trusted technical expertise needed to keep your sensitive information safe and your operations compliant.
+                    </p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-badge-box">
+                    <img src="comptia-csis.png" alt="CompTIA CSIS" class="cert-badge">
+                </div>
+                <div class="cert-details">
+                    <h2 class="cert-heading">CompTIA Secure Infrastructure Specialist (CSIS)</h2>
+                    <p class="cert-description">
+                        I design, manage, and defend the critical technology systems that modern businesses rely on every day. As a CompTIA Secure Infrastructure Specialist (CSIS), I hold a master-level combination credential that explicitly verifies my comprehensive expertise across the three core pillars of IT: computer hardware systems, network infrastructure, and advanced data cybersecurity. Rather than focusing on just one piece of the puzzle, I look at your technology as a whole. From deploying hardware and optimizing your network connectivity to building airtight defenses against cyber threats, I ensure your digital infrastructure is fast, stable, and deeply protected.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-cta">
+            <div class="cta-heading">Connect With Us For Honest Local Service!</div>
+            <div class="cta-subtext">We fix your tech headaches quickly so you don't have to. Reach out today for support or a consultation.</div>
+            <a href="mailto:ITAppySolutions@gmail.com" class="cta-email">📧 ITAppySolutions@gmail.com</a>
+            <div class="spanish-note">🌐 *Servicios de asistencia técnica disponibles en Español e Inglés.*</div>
+        </div>
+    </div>
+
+</body>
+</html>
