@@ -7,12 +7,10 @@
 
     <meta property="og:title" content="Appalachian IT Solutions | Local Tech Support">
     <meta property="og:description" content="Your trusted local technology partner for residential and small business PC repairs, networking, smart home, and cybersecurity.">
-    
     <meta property="og:image" content="https://ITAppySolutions.github.io/index/cbarnespro.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ITAppySolutions.github.io/index/">
 
@@ -31,7 +29,7 @@
             --accent-blue: #38bdf8;
         }
 
-        * {
+        *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -47,8 +45,6 @@
             line-height: 1.6;
             display: flex;
             flex-direction: column;
-            
-            /* Full Page Background */
             background-image: url('mobo01.jpg'); 
             background-size: cover;          
             background-position: center;     
@@ -67,7 +63,6 @@
             flex: 1;
         }
 
-        /* Hero Header */
         header {
             background: var(--overlay-bg);
             border: 2px solid var(--border-color);
@@ -104,7 +99,6 @@
             font-weight: 600;
         }
 
-        /* Services & Trust Main Section */
         .content-section {
             background: var(--overlay-bg);
             border: 2px solid var(--border-color);
@@ -127,7 +121,6 @@
             padding-bottom: 12px;
         }
 
-        /* Services 2-Column Centered Grid */
         .services-grid-centered {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -190,7 +183,6 @@
             color: var(--text-muted);
         }
 
-        /* Quick Fixes Inner Layout */
         .quick-fixes-flex {
             display: flex;
             flex-wrap: wrap;
@@ -226,10 +218,8 @@
         .details-btn:hover {
             background: rgba(56, 189, 248, 0.25);
             border-color: var(--accent-blue);
-            transform: translateY(-1px);
         }
 
-        /* Certification Section Banner */
         .cert-section {
             background: var(--overlay-bg);
             border: 2px solid var(--border-color);
@@ -282,3 +272,97 @@
 
         .cert-logo:hover {
             transform: scale(1.05);
+        }
+
+        .footer-cta {
+            background: linear-gradient(135deg, #0284c7 0%, #059669 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 28px 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .cta-heading {
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .cta-subtext {
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+            color: #e2e8f0;
+        }
+
+        .cta-email {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 10px 22px;
+            border-radius: 8px;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: background 0.2s;
+        }
+
+        .cta-email:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .spanish-note {
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            margin-top: 12px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="brand-title-appalachian">Appalachian</h1>
+            <span class="brand-title-solutions">IT Solutions</span>
+            <p class="brand-tagline">Your Trusted Local Technology Partner — For Residential & Small Businesses</p>
+        </header>
+
+        <div class="content-section">
+            <h2 class="section-title">TRUST - QUALITY YOU CAN RELY ON.</h2>
+            
+            <div class="services-grid-centered">
+                <div class="card">
+                    <h3 class="card-title green">💻 1. Computer Health & Recovery</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="item-name">• PC Tune-Up & Speed Boost</div>
+                            <div class="item-desc">Deep system cleanup, bloatware removal, and optimization.</div>
+                        </li>
+                        <li class="service-item">
+                            <div class="item-name">• Virus & Malware Defense</div>
+                            <div class="item-desc">Complete virus scanning and threat removal.</div>
+                        </li>
+                        <li class="service-item">
+                            <div class="item-name">• Blue Screen & Crash Repair</div>
+                            <div class="item-desc">Diagnostics to resolve freezes and boot errors.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">🔄 2. New Device & Data Services</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="item-name">• New PC Setup</div>
+                            <div class="item-desc">Unboxing, user profile setup, and custom configurations.</div>
+                        </li>
+                        <li class="service-item">
+                            <div class="item-name">• Safe Data Migration</div>
+                            <div class="item-desc">Transfer photos, documents, and files securely.</div>
+                        </li>
+                        <li class="service-item">
