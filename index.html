@@ -8,22 +8,22 @@
     <meta property="og:title" content="Appalachian IT Solutions | Local Tech Support">
     <meta property="og:description" content="Your trusted local technology partner for residential and small business PC repairs, networking, smart home, and cybersecurity.">
     
-    <meta property="og:image" content="https://ITAppySolutions.github.io/AppalachianIT/cbarnespro.png">
+    <meta property="og:image" content="https://ITAppySolutions.github.io/index/cbarnespro.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ITAppySolutions.github.io/AppalachianIT/">
+    <meta property="og:url" content="https://ITAppySolutions.github.io/index/">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Appalachian IT Solutions | Local Tech Support">
     <meta name="twitter:description" content="Your trusted local technology partner for residential and small business PC repairs, networking, smart home, and cybersecurity.">
-    <meta name="twitter:image" content="https://ITAppySolutions.github.io/AppalachianIT/cbarnespro.png">
+    <meta name="twitter:image" content="https://ITAppySolutions.github.io/index/cbarnespro.png">
     <style>
         :root {
             --bg-fallback: #0f172a;
-            --overlay-bg: rgba(15, 23, 42, 0.9);
+            --overlay-bg: rgba(15, 23, 42, 0.92);
             --border-color: #334155;
             --text-main: #f8fafc;
             --text-muted: #cbd5e1;
@@ -38,7 +38,7 @@
         }
 
         html, body {
-            height: 100%;
+            min-height: 100vh;
         }
 
         body {
@@ -48,19 +48,23 @@
             display: flex;
             flex-direction: column;
             
-            /* Full Page Background Image set to mobo01.jpg */
+            /* Full Page Background */
             background-image: url('mobo01.jpg'); 
             background-size: cover;          
             background-position: center;     
             background-attachment: fixed;    
             background-repeat: no-repeat;
             background-color: var(--bg-fallback);
+            padding: 24px 16px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 950px;
             margin: 0 auto;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         /* Hero Header */
@@ -100,7 +104,7 @@
             font-weight: 600;
         }
 
-        /* Services & Trust Showcase Section */
+        /* Services & Trust Main Section */
         .content-section {
             background: var(--overlay-bg);
             border: 2px solid var(--border-color);
@@ -109,7 +113,6 @@
             margin-bottom: 24px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.6);
             backdrop-filter: blur(8px);
-            flex: 1; /* Pushes footer down */
         }
 
         .section-title {
@@ -124,7 +127,7 @@
             padding-bottom: 12px;
         }
 
-        /* Centered Service Cards Grid */
+        /* Services 2-Column Centered Grid */
         .services-grid-centered {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -200,16 +203,48 @@
             min-width: 200px;
         }
 
-        /* Certification Section */
+        .details-btn-container {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .details-btn {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.98rem;
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            padding: 10px 22px;
+            border-radius: 8px;
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .details-btn:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: var(--accent-blue);
+            transform: translateY(-1px);
+        }
+
+        /* Certification Section Banner */
         .cert-section {
             background: var(--overlay-bg);
             border: 2px solid var(--border-color);
             border-radius: 16px;
-            padding: 25px;
+            padding: 25px 20px;
             text-align: center;
             margin-bottom: 24px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.6);
             backdrop-filter: blur(8px);
+        }
+
+        .cert-title-link {
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 18px;
         }
 
         .cert-title {
@@ -218,7 +253,11 @@
             color: var(--accent-blue);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 18px;
+            transition: color 0.2s;
+        }
+
+        .cert-title-link:hover .cert-title {
+            color: var(--accent-green);
         }
 
         .logo-container {
@@ -233,181 +272,13 @@
             max-height: 80px;
             width: auto;
             object-fit: contain;
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(255, 255, 255, 0.95);
             border: 1px solid var(--border-color);
-            padding: 8px 12px;
-            border-radius: 8px;
+            padding: 6px 12px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
         }
 
-        /* Footer / Contact CTA */
-        .footer-cta {
-            background: linear-gradient(135deg, #0284c7 0%, #059669 100%);
-            color: #ffffff;
-            text-align: center;
-            padding: 28px 20px;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-            margin-top: auto; /* Pushes to bottom */
-            width: 100%;
-        }
-
-        .cta-heading {
-            font-size: 1.3rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-        }
-
-        .cta-subtext {
-            font-size: 0.95rem;
-            margin-bottom: 14px;
-            color: #e2e8f0;
-        }
-
-        .cta-email {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: #ffffff;
-            text-decoration: none;
-            background: rgba(0, 0, 0, 0.25);
-            padding: 10px 20px;
-            border-radius: 8px;
-            display: inline-block;
-            border: 1px solid rgba(255,255,255,0.3);
-        }
-
-        .cta-email:hover {
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        .spanish-note {
-            font-size: 0.9rem;
-            color: #e2e8f0;
-            margin-top: 12px;
-            font-style: italic;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <header>
-            <h1 class="brand-title-appalachian">Appalachian</h1>
-            <span class="brand-title-solutions">IT Solutions</span>
-            <p class="brand-tagline">Your Trusted Local Technology Partner — For Residential & Small Businesses</p>
-        </header>
-
-        <div class="content-section">
-            <h2 class="section-title">TRUST - Quality You Can Rely On.</h2>
-            
-            <div class="services-grid-centered">
-                <div class="card">
-                    <h3 class="card-title green">💻 1. Computer Health & Recovery</h3>
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <div class="item-name">• PC Tune-Up & Speed Boost</div>
-                            <div class="item-desc">Deep system cleanup, bloatware removal, and optimization.</div>
-                        </li>
-                        <li class="service-item">
-                            <div class="item-name">• Virus & Malware Defense</div>
-                            <div class="item-desc">Complete virus scanning and threat removal.</div>
-                        </li>
-                        <li class="service-item">
-                            <div class="item-name">• Blue Screen & Crash Repair</div>
-                            <div class="item-desc">Diagnostics to resolve freezes and boot errors.</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3 class="card-title">🔄 2. New Device & Data Services</h3>
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <div class="item-name">• New PC Setup</div>
-                            <div class="item-desc">Unboxing, user profile setup, and custom configurations.</div>
-                        </li>
-                        <li class="service-item">
-                            <div class="item-name">• Safe Data Migration</div>
-                            <div class="item-desc">Transfer photos, documents, and files securely.</div>
-                        </li>
-                        <li class="service-item">
-                            <div class="item-name">• Cloud Backups</div>
-                            <div class="item-desc">Set up automated local and cloud backups.</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3 class="card-title green">🌐 3. Home Wi-Fi & Networking</h3>
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <div class="item-name">• Dead-Zone Elimination</div>
-                            <div class="item-desc">High-speed mesh Wi-Fi setup for whole-home coverage.</div>
-                        </li>
-                        <li class="service-item">
-                            <div class="item-name">• Router Security</div>
-                            <div class="item-desc">Secure gateway routing and guest network isolation.</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3 class="card-title">🔒 4. Home Security & Smart Tech</h3>
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <div class="item-name">• Smart Camera Setup</div>
-                            <div class="item-desc">Mounting and mobile app synchronization.</div>
-                        </li>
-                        <li class="service-item">
-                            <div class="item-name">• Parental Controls</div>
-                            <div class="item-desc">Family content filters and screen time management.</div>
-                        </li>
-                    </ul>
-                </div>
-
-               <div class="card full-width">
-    <h3 class="card-title green">⚡ 5. Quick Fixes & On-Demand Support</h3>
-    <div class="quick-fixes-flex">
-        <div>
-            <div class="item-name">• Password Help</div>
-            <div class="item-desc">Fast account recovery for locked Windows & Mac profiles.</div>
-        </div>
-        <div>
-            <div class="item-name">• Printer Setup</div>
-            <div class="item-desc">Wireless printer connection, driver updates, and queue fixes.</div>
-        </div>
-        <div>
-            <div class="item-name">• Remote Support</div>
-            <div class="item-desc">Quick screen-share assistance for minor software issues.</div>
-        </div>
-    </div>
-
-    <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--border-color); text-align: center;">
-        <a href="services.html" style="color: var(--accent-blue); text-decoration: none; font-weight: 800; font-size: 1.05rem; display: inline-block; background: rgba(56, 189, 248, 0.1); padding: 10px 20px; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.3); transition: all 0.2s;">
-            🔍 Click here to learn more about our services & solutions in greater detail! →
-        </a>
-    </div>
-</div>
-
-        <div class="cert-section">
-    <a href="certified.html" style="text-decoration: none;">
-        <h3 class="cert-title" style="cursor: pointer;">Certified Professional Expertise — What Is A Certified Professional? →</h3>
-    </a>
-    <div class="logo-container">
-        <a href="certified.html"><img src="comptia-a.png" alt="CompTIA A+" class="cert-logo"></a>
-        <a href="certified.html"><img src="comptia-net.png" alt="CompTIA Network+" class="cert-logo"></a>
-        <a href="certified.html"><img src="comptia-sec.png" alt="CompTIA Security+" class="cert-logo"></a>
-        <a href="certified.html"><img src="comptia-csis.png" alt="CompTIA CSIS" class="cert-logo"></a>
-    </div>
-</div>
-
-        <div class="footer-cta">
-            <div class="cta-heading">Connect With Us For Honest Local Service!</div>
-            <div class="cta-subtext">We fix your tech headaches quickly so you don't have to. Reach out today for support or a consultation.</div>
-            <a href="mailto:ITAppySolutions@gmail.com" class="cta-email">📧 ITAppySolutions@gmail.com</a>
-            <div class="spanish-note">🌐 *Servicios de asistencia técnica disponibles en Español e Inglés.*</div>
-        </div>
-    </div>
-
-</body>
-</html>
+        .cert-logo:hover {
+            transform: scale(1.05);
