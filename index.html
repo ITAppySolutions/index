@@ -1,3 +1,4 @@
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +7,16 @@
     <title>Appalachian IT Solutions | Residential & Small Business Tech Support</title>
     <style>
         :root {
-            --bg-color-fallback: #0d131f;
-            --card-bg-transparent: rgba(30, 41, 59, 0.90); 
+            --bg-fallback: #0f172a;
+            --card-bg: rgba(15, 23, 42, 0.92);
             --border-color: #334155;
-            --text-main: #f1f5f9;
+            --text-main: #f8fafc;
             --text-muted: #cbd5e1;
             --accent-green: #4ade80;
             --accent-blue: #38bdf8;
         }
 
-        *, *::before, *::after {
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -27,34 +28,34 @@
             line-height: 1.6;
             padding: 20px;
             
-            /* Full Page Background Image set to mobo01.jpg */
+            /* Full Page Background Image */
             background-image: url('mobo01.jpg'); 
             background-size: cover;          
             background-position: center;     
             background-attachment: fixed;    
             background-repeat: no-repeat;
-            background-color: var(--bg-color-fallback);
+            background-color: var(--bg-fallback);
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         /* Hero Header */
         header {
-            background: linear-gradient(180deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+            background: var(--card-bg);
             border: 2px solid var(--border-color);
             border-radius: 16px;
             padding: 30px 20px;
             text-align: center;
             margin-bottom: 24px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
         }
 
         .brand-title-appalachian {
-            font-size: 2.3rem;
+            font-size: 2.4rem;
             font-weight: 900;
             letter-spacing: 2px;
             color: var(--accent-green);
@@ -62,73 +63,70 @@
         }
 
         .brand-title-solutions {
-            font-size: 1.9rem;
+            font-size: 1.8rem;
             font-weight: 800;
             letter-spacing: 1.5px;
             color: var(--accent-blue);
             text-transform: uppercase;
-            margin-top: -3px;
+            margin-top: -2px;
             display: block;
         }
 
         .brand-tagline {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: var(--text-muted);
-            margin-top: 8px;
+            margin-top: 10px;
             font-weight: 600;
         }
 
-        /* Trust & Services Showcase Section */
-        .trust-section {
-            background: var(--card-bg-transparent);
-            border: 1px solid var(--border-color);
+        /* Services & Trust Section */
+        .content-section {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
             border-radius: 16px;
             padding: 30px;
-            text-align: center;
             margin-bottom: 24px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
         }
 
-        .trust-slogan {
-            font-size: 1.4rem;
+        .section-title {
+            font-size: 1.35rem;
             font-weight: 800;
             color: var(--accent-green);
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 25px;
+            text-align: center;
+            margin-bottom: 24px;
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 12px;
         }
 
-        /* Centered Service Cards Grid */
-        .services-grid-centered {
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            text-align: left;
         }
 
         @media (max-width: 768px) {
-            .services-grid-centered {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
         }
 
         .card {
-            background: rgba(15, 23, 42, 0.75);
+            background: rgba(30, 41, 59, 0.75);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .card.full-width {
             grid-column: 1 / -1;
         }
 
-        .card-title {
-            font-size: 1.15rem;
+        .card-heading {
+            font-size: 1.1rem;
             font-weight: 800;
             color: var(--accent-blue);
             margin-bottom: 10px;
@@ -136,7 +134,7 @@
             padding-bottom: 6px;
         }
 
-        .card-title.green {
+        .card-heading.green {
             color: var(--accent-green);
         }
 
@@ -155,8 +153,7 @@
         .item-name {
             font-size: 0.95rem;
             font-weight: 700;
-            color: #f8fafc;
-            margin-bottom: 2px;
+            color: #ffffff;
         }
 
         .item-desc {
@@ -164,20 +161,20 @@
             color: var(--text-muted);
         }
 
-        /* Certification Section Banner */
+        /* Certification Section */
         .cert-section {
-            background: var(--card-bg-transparent);
-            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
             border-radius: 16px;
             padding: 25px;
             text-align: center;
             margin-bottom: 24px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
         }
 
         .cert-title {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 800;
             color: var(--accent-blue);
             text-transform: uppercase;
@@ -190,14 +187,14 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 20px;
         }
 
         .cert-logo {
-            max-height: 85px;
+            max-height: 80px;
             width: auto;
             object-fit: contain;
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(15, 23, 42, 0.8);
             border: 1px solid var(--border-color);
             padding: 8px 12px;
             border-radius: 8px;
@@ -208,9 +205,9 @@
             background: linear-gradient(135deg, #0284c7 0%, #059669 100%);
             color: #ffffff;
             text-align: center;
-            padding: 26px 20px;
+            padding: 28px 20px;
             border-radius: 16px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
         }
 
         .cta-heading {
@@ -222,7 +219,7 @@
 
         .cta-subtext {
             font-size: 0.95rem;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             color: #e2e8f0;
         }
 
@@ -259,88 +256,88 @@
             <p class="brand-tagline">Your Trusted Local Technology Partner — For Residential & Small Businesses</p>
         </header>
 
-        <div class="trust-section">
-            <div class="trust-slogan">TRUST - Quality You Can Rely On.</div>
+        <div class="content-section">
+            <h2 class="section-title">TRUST - Quality You Can Rely On.</h2>
             
-            <div class="services-grid-centered">
+            <div class="services-grid">
                 <div class="card">
-                    <h2 class="card-title green">💻 1. Computer Health & Recovery</h2>
+                    <h3 class="card-heading green">💻 1. Computer Health & Recovery</h3>
                     <ul class="service-list">
                         <li class="service-item">
                             <div class="item-name">• PC Tune-Up & Speed Boost</div>
-                            <div class="item-desc">Deep system cleanup, bloatware removal, OS updates, and startup optimization.</div>
+                            <div class="item-desc">Deep system cleanup, bloatware removal, and optimization.</div>
                         </li>
                         <li class="service-item">
                             <div class="item-name">• Virus & Malware Defense</div>
-                            <div class="item-desc">Complete virus scan, adware/spyware removal, and lightweight protection install.</div>
+                            <div class="item-desc">Complete virus scanning and threat removal.</div>
                         </li>
                         <li class="service-item">
                             <div class="item-name">• Blue Screen & Crash Repair</div>
-                            <div class="item-desc">Hardware & software diagnostics to resolve reboots, freezes, and startup errors.</div>
+                            <div class="item-desc">Diagnostics to resolve freezes and boot errors.</div>
                         </li>
                     </ul>
                 </div>
 
                 <div class="card">
-                    <h2 class="card-title">🔄 2. New Device & Data Services</h2>
+                    <h3 class="card-heading">🔄 2. New Device & Data Services</h3>
                     <ul class="service-list">
                         <li class="service-item">
                             <div class="item-name">• New PC Setup</div>
-                            <div class="item-desc">Unboxing, initial configuration, custom settings, user profile, and update installs.</div>
+                            <div class="item-desc">Unboxing, user profile setup, and custom configurations.</div>
                         </li>
                         <li class="service-item">
                             <div class="item-name">• Safe Data Migration</div>
-                            <div class="item-desc">Securely move your photos, personal documents, and browser bookmarks to your new PC.</div>
+                            <div class="item-desc">Transfer photos, documents, and files securely.</div>
                         </li>
                         <li class="service-item">
                             <div class="item-name">• Cloud Backups</div>
-                            <div class="item-desc">Set up seamless, automatic local and cloud backups so you never lose data.</div>
+                            <div class="item-desc">Set up automated local and cloud backups.</div>
                         </li>
                     </ul>
                 </div>
 
                 <div class="card">
-                    <h2 class="card-title green">🌐 3. Home Wi-Fi & Networking</h2>
+                    <h3 class="card-heading green">🌐 3. Home Wi-Fi & Networking</h3>
                     <ul class="service-list">
                         <li class="service-item">
                             <div class="item-name">• Dead-Zone Elimination</div>
-                            <div class="item-desc">High-speed Mesh Wi-Fi or Access Point installation for whole-home coverage.</div>
+                            <div class="item-desc">High-speed mesh Wi-Fi setup for whole-home coverage.</div>
                         </li>
                         <li class="service-item">
                             <div class="item-name">• Router Security</div>
-                            <div class="item-desc">Secure gateway router setup, channel optimization, and guest network isolation.</div>
+                            <div class="item-desc">Secure gateway routing and guest network isolation.</div>
                         </li>
                     </ul>
                 </div>
 
                 <div class="card">
-                    <h2 class="card-title">🔒 4. Home Security & Smart Tech</h2>
+                    <h3 class="card-heading">🔒 4. Home Security & Smart Tech</h3>
                     <ul class="service-list">
                         <li class="service-item">
                             <div class="item-name">• Smart Camera Setup</div>
-                            <div class="item-desc">Mounting and mobile app synchronization for wireless security cameras.</div>
+                            <div class="item-desc">Mounting and mobile app synchronization.</div>
                         </li>
                         <li class="service-item">
                             <div class="item-name">• Parental Controls</div>
-                            <div class="item-desc">Configure family content filters, web blocking, and screen time management.</div>
+                            <div class="item-desc">Family content filters and screen time management.</div>
                         </li>
                     </ul>
                 </div>
 
                 <div class="card full-width">
-                    <h2 class="card-title green">⚡ 5. Quick Fixes & On-Demand Support</h2>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 5px;">
+                    <h3 class="card-heading green">⚡ 5. Quick Fixes & On-Demand Support</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
                         <div>
                             <div class="item-name">• Password Help</div>
-                            <div class="item-desc">Fast account recovery for locked profiles.</div>
+                            <div class="item-desc">Fast account recovery.</div>
                         </div>
                         <div>
                             <div class="item-name">• Printer Setup</div>
-                            <div class="item-desc">Wireless printer connection and queue fixes.</div>
+                            <div class="item-desc">Wireless connection fixes.</div>
                         </div>
                         <div>
                             <div class="item-name">• Remote Support</div>
-                            <div class="item-desc">Quick screen-share support for minor issues.</div>
+                            <div class="item-desc">Quick screen-share assistance.</div>
                         </div>
                     </div>
                 </div>
@@ -348,7 +345,7 @@
         </div>
 
         <div class="cert-section">
-            <div class="cert-title">Certified Professional Expertise</div>
+            <h3 class="cert-title">Certified Professional Expertise</h3>
             <div class="logo-container">
                 <img src="comptia-a.png" alt="CompTIA A+" class="cert-logo">
                 <img src="comptia-net.png" alt="CompTIA Network+" class="cert-logo">
