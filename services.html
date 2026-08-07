@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Services & Solutions | Appalachian IT Solutions</title>
+
+    <meta property="og:title" content="Detailed Technology Services | Appalachian IT Solutions">
+    <meta property="og:description" content="In-depth breakdown of residential and small business IT services, computer repair, networking, and security solutions.">
+    <meta property="og:image" content="https://ITAppySolutions.github.io/AppalachianIT/cbarnespro.png">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --bg-fallback: #0f172a;
+            --overlay-bg: rgba(15, 23, 42, 0.92);
+            --card-bg: rgba(30, 41, 59, 0.85);
+            --border-color: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #cbd5e1;
+            --accent-green: #4ade80;
+            --accent-blue: #38bdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: url('mobo01.jpg'); 
+            background-size: cover;          
+            background-position: center;     
+            background-attachment: fixed;    
+            background-repeat: no-repeat;
+            background-color: var(--bg-fallback);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        /* Top Header & Navigation */
+        header {
+            background: var(--overlay-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+        }
+
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            background: rgba(56, 189, 248, 0.1);
+            padding: 6px 14px;
+            border-radius: 6px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            transition: all 0.2s;
+        }
+
+        .nav-back:hover {
+            background: rgba(74, 222, 128, 0.15);
+            color: var(--accent-green);
+            border-color: rgba(74, 222, 128, 0.3);
+        }
+
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            color: var(--accent-green);
+            text-transform: uppercase;
+        }
+
+        .page-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+            font-weight: 600;
+        }
+
+        /* Detailed Service Cards */
+        .content-section {
+            background: var(--overlay-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .category-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-header {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-header.green {
+            color: var(--accent-green);
+        }
+
+        .detail-block {
+            margin-bottom: 18px;
+        }
+
+        .detail-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .detail-text {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        .badge-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .badge-res {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-blue);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .badge-biz {
+            background: rgba(74, 222, 128, 0.15);
+            color: var(--accent-green);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            background: linear-gradient(135deg, #0284c7 0%, #059669 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 28px 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .cta-heading {
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .cta-subtext {
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+            color: #e2e8f0;
+        }
+
+        .cta-email {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: background 0.2s;
+        }
+
+        .cta-email:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .spanish-note {
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            margin-top: 12px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <a href="index.html" class="nav-back">← Return to Main Page</a>
+            <h1 class="page-title">Comprehensive IT Services & Solutions</h1>
+            <p class="page-subtitle">Tailored Support for Residential Clients & Small Businesses</p>
+        </header>
+
+        <div class="content-section">
+
+            <div class="category-card">
+                <h2 class="category-header green">💻 1. Computer Health & Performance Recovery</h2>
+                
+                <div class="detail-block">
+                    <div class="detail-title">PC Tune-Up & Speed Boost <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Over time, computers accumulate startup bloatware, cached system files, invalid registry entries, and outdated drivers that cause slow boot times and application lag. We perform deep operating system cleanups, disable unnecessary background telemetry, optimize system memory allocation, and verify OS integrity to bring your workstation or family PC back to peak factory performance.
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <div class="detail-title">Virus, Spyware & Malware Remediation <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Malicious adware, browser hijackers, keyloggers, and covert background miners compromise security and performance. We isolate infected hardware, execute multi-pass deep environment cleanups to purge rootkits and trojans, restore altered system settings, and deploy lightweight, proactive defense tools to protect against future digital threats.
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <div class="detail-title">Blue Screen (BSOD) & System Crash Repair <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Stop code errors, infinite reboot loops, and sudden system freezes are usually caused by corrupt kernel files, failing memory sticks (RAM), overheating components, or conflicting hardware drivers. We analyze dump log files, perform stress diagnostics on physical memory and storage drives, and replace faulty components to restore operational stability.
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <div class="detail-title">Hardware Repairs & Performance Upgrades <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Breathe new life into aging desktop towers and laptops without buying new hardware. We replace slow, mechanical spinning hard drives with ultra-fast Solid State Drives (SSDs), double system RAM for smooth multitasking, swap out failing power supply units (PSUs), and clean thermal paste applications to eliminate thermal throttling.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <h2 class="category-header">🔄 2. New Device Deployment & Data Continuity</h2>
+                
+                <div class="detail-block">
+                    <div class="detail-title">"White-Glove" Computer Provisioning <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Setting up a new computer involves bypassing OEM bloatware, creating secure local user profiles, installing mandatory security patches, and configuring browser settings. We handle end-to-end unboxing and configuration for home users and small business workstations, ensuring software licenses and office tools are configured correctly from day one.
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <div class="detail-title">Secure File & Identity Data Migration <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Upgrading computers shouldn't mean losing your important documents, financial records, family photos, or saved web credentials. We safely migrate your data structure from legacy drives—including corrupted or unbootable systems—directly onto your new machine without compromising folder structures or privacy.
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <div class="detail-title">Automated Local & Cloud Backup Frameworks <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Ransomware, drive failure, and accidental deletion can wipe out critical files in seconds. We engineer automated back-up schedules following the 3-2-1 backup standard (local drive redundancy coupled with encrypted cloud backup vaults) so your business documents and family memories are continuously protected and quickly recoverable.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <h2 class="category-header green">🌐 3. Wi-Fi, Mesh & Hardwired Network Architecture</h2>
+                
+                <div class="detail-block">
+                    <div class="detail-title">Whole-Home & Office Dead-Zone Elimination <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Weak signal coverage, dropped Zoom calls, and buffering stream feeds occur when ISP-provided routers fail to cover structural layout gaps. We design and install high-performance Mesh Wi-Fi systems and dedicated Wireless Access Points (WAPs) to guarantee seamless roaming and high-speed bandwidth across every room, office, and outdoor work area.
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <div class="detail-title">Network Isolation & Security Hardening <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Unsecured Wi-Fi routers expose personal devices to unauthorized access. We configure gateway routers with strong encryption standards, optimize broadcast channel congestion, update firmware vulnerabilities, and build isolated guest networks to keep untrusted devices separate from your primary data network.
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <div class="detail-title">Custom Ethernet Cable Runs & Drops <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        When wireless interference degrades performance for gaming consoles, smart TVs, NAS devices, or VoIP office phones, hardwired ethernet is the ultimate solution. We install structured CAT6 cable drops for lag-free, gigabit-speed physical connections directly to your desk or media hub.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <h2 class="category-header">🔒 4. Smart Security & Ecosystem Integration</h2>
+                
+                <div class="detail-block">
+                    <div class="detail-title">Smart Camera & Doorbell System Integration <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Protect your property with seamless video surveillance setups. We mount, connect, and configure smart security cameras and doorbell units (Ring, Blink, UniFi, and wireless eco-systems), synchronizing mobile notifications and local recording hubs for real-time monitoring on smartphones and tablets.
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <div class="detail-title">Parental Controls & Safe Browsing Filters <span class="badge-tag badge-res">Residential</span></div>
+                    <div class="detail-text">
+                        Keep young family members safe online. We deploy router-level content filters, block explicit websites and malicious domains across all home devices, and set up enforced screen-time management controls to protect your household without complicated daily maintenance.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <h2 class="category-header green">⚡ 5. Rapid Response & On-Demand Technical Assistance</h2>
+                
+                <div class="detail-block">
+                    <div class="detail-title">Account Access & Password Recovery <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Locked out of a critical Windows user profile, Mac account, or email address? We help you recover system administrative rights safely, resolve password lockouts, and configure secure password management systems to prevent future login issues.
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <div class="detail-title">Printer, Scanner & Peripheral Diagnostics <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Wireless print spooler errors, driver mismatches, and offline queue errors are frustrating time-wasters. We resolve network printer connectivity, install proper vendor drivers, and configure network scanning paths across workstations.
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <div class="detail-title">Encrypted Remote Desktop Support <span class="badge-tag badge-res">Residential</span><span class="badge-tag badge-biz">Small Business</span></div>
+                    <div class="detail-text">
+                        Minor software glitches, email client sync issues, and configuration questions don't always require an on-site visit. Through secure, one-time permission remote screen-share tools, we diagnose and fix software problems directly on your screen while you watch.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-cta">
+            <div class="cta-heading">Connect With Us For Honest Local Service!</div>
+            <div class="cta-subtext">We fix your tech headaches quickly so you don't have to. Reach out today for support or a consultation.</div>
+            <a href="mailto:ITAppySolutions@gmail.com" class="cta-email">📧 ITAppySolutions@gmail.com</a>
+            <div class="spanish-note">🌐 *Servicios de asistencia técnica disponibles en Español e Inglés.*</div>
+        </div>
+    </div>
+
+</body>
+</html>
