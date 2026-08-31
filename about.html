@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me & My Mission | Appalachian IT Solutions</title>
+    <style>
+        :root {
+            --primary-navy: #0f172a;
+            --accent-blue: #0284c7;
+            --emerald-green: #059669;
+            --light-bg: #f8fafc;
+            --text-dark: #334155;
+            --text-heading: #0f172a;
+            --border-color: #e2e8f0;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+        }
+
+        /* NAVIGATION BAR */
+        header {
+            background-color: var(--primary-navy);
+            color: #ffffff;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            color: var(--emerald-green);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: #38bdf8;
+        }
+
+        /* MAIN HERO & CONTAINER */
+        .page-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.2rem;
+            color: var(--text-heading);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        .content-container {
+            max-width: 1100px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ABOUT GRID */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .profile-card {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+
+        .profile-card h3 {
+            font-size: 1.25rem;
+            color: var(--text-heading);
+        }
+
+        .profile-card .title-badge {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: var(--accent-blue);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 0.35rem 0.8rem;
+            border-radius: 20px;
+            margin-top: 0.5rem;
+        }
+
+        /* CONTENT SECTIONS */
+        .section-block {
+            margin-bottom: 2rem;
+        }
+
+        .section-block h2 {
+            font-size: 1.4rem;
+            color: var(--text-heading);
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-block p {
+            margin-bottom: 1rem;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        /* HIGHLIGHT CARDS */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-blue);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+
+        .card.emerald {
+            border-left-color: var(--emerald-green);
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            color: var(--text-heading);
+            margin-bottom: 0.5rem;
+        }
+
+        .card ul {
+            padding-left: 1.2rem;
+        }
+
+        .card li {
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--primary-navy);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        @media (max-width: 850px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .profile-img {
+                max-width: 300px;
+                margin: 0 auto 1rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION HEADER -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-text">APPALACHIAN <span>IT SOLUTIONS</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html" class="active">About Me & My Mission</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-header">
+        <h1>About Me & My Mission</h1>
+        <p>Reliable, Economical & Enterprise-Grade IT Solutions for Homes & Local Businesses</p>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <div class="content-container">
+        
+        <div class="about-grid">
+            <!-- LEFT PROFILE COLUMN -->
+            <div class="profile-card">
+                <img src="cody_barnes_headshot_clean.jpg" alt="Cheyenne Cody Barnes - Owner & IT Consultant" class="profile-img">
+                <h3>Cheyenne Cody Barnes</h3>
+                <span class="title-badge">Owner & Technology Consultant</span>
+            </div>
+
+            <!-- RIGHT MISSION & BACKGROUND TEXT -->
+            <div>
+                <!-- MISSION STATEMENT -->
+                <div class="section-block">
+                    <h2>🎯 My Mission</h2>
+                    <p>
+                        At Appalachian IT Solutions, my mission is simple: <strong>to empower individuals, families, and local small businesses with dependable, high-quality technology and cybersecurity solutions at an economical price.</strong> Reliable technology shouldn't be a luxury reserved only for giant corporations. I am dedicated to bridging that gap by providing accessible, honest, and expert technical consulting that protects what matters most without breaking the bank.
+                    </p>
+                </div>
+
+                <!-- PROFESSIONAL EXPERIENCE & EDUCATION -->
+                <div class="section-block">
+                    <h2>🎓 Background & Technical Expertise</h2>
+                    <p>
+                        With <strong>over 5+ years of dedicated professional experience</strong> in IT administration, network engineering, and cybersecurity, I bring hands-on expertise to every deployment. I hold an <strong>Associate of Science degree in Computer Science / Systems Management</strong> from Northeast State Community College and am actively completing my <strong>Bachelor of Science in Cybersecurity</strong> through Western Governors University (WGU).
+                    </p>
+                    <p>
+                        To ensure my clients receive industry-leading defense and infrastructure, I hold multiple professional certifications (including CompTIA A+, Network+, Security+, and CSIS) and maintain official vendor partnerships with top cybersecurity platforms and **Ubiquiti UniFi** networking hardware.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMMUNITY & YOUTH INITIATIVES -->
+        <div class="cards-grid">
+            
+            <div class="card">
+                <h3>🛡️ Digital Safety for Youth & Families</h3>
+                <p>
+                    I am deeply committed to protecting youth and supporting families against online threats, cyberbullying, and inappropriate content. Through custom-configured network shields, DNS filtering, and parental access controls, I help parents build safe digital enclaves at home so children can explore, learn, and play online securely.
+                </p>
+            </div>
+
+            <div class="card emerald">
+                <h3>🐾 Animal Rescue & Crisis Response</h3>
+                <p>
+                    In my personal time, I actively volunteer in animal rescue and emergency disaster relief. During the devastating Kentucky floods caused by levee breaches, as well as in the aftermath of Hurricane Helene, I mobilized to assist with animal recovery and pet crisis rescue. At home, I've rescued and trained 3 dogs and 3 cats, working continuously to ensure they all live together harmoniously as one family.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🍽️ Community & Local Support</h3>
+                <p>
+                    Outside of technology, I enjoy attending church with my wife, going on cruises, and hosting a local food podcast alongside a dear friend. Our podcast is dedicated to highlighting mom-and-pop restaurants across the region, bringing an influx of new customers and visibility to small local businesses that form the heart of our community.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Appalachian IT Solutions. All rights reserved.</p>
+        <p>Serving Tri-Cities & Surrounding Regions | <a href="contact.html">Get in Touch</a></p>
+    </footer>
+
+</body>
+</html>
