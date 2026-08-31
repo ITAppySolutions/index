@@ -67,7 +67,7 @@
             background: var(--overlay-bg);
             border: 2px solid var(--border-color);
             border-radius: 16px;
-            padding: 30px 20px;
+            padding: 30px 20px 20px 20px;
             text-align: center;
             margin-bottom: 24px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.6);
@@ -97,6 +97,34 @@
             color: var(--text-muted);
             margin-top: 10px;
             font-weight: 600;
+        }
+
+        /* NAVIGATION MENU STYLES */
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-blue);
+            background: rgba(56, 189, 248, 0.15);
+            border-color: rgba(56, 189, 248, 0.35);
         }
 
         .content-section {
@@ -200,13 +228,17 @@
             padding-top: 16px;
             border-top: 1px solid var(--border-color);
             text-align: center;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .details-btn {
             color: var(--accent-blue);
             text-decoration: none;
             font-weight: 800;
-            font-size: 0.98rem;
+            font-size: 0.95rem;
             display: inline-block;
             background: rgba(56, 189, 248, 0.1);
             padding: 10px 22px;
@@ -218,6 +250,17 @@
         .details-btn:hover {
             background: rgba(56, 189, 248, 0.25);
             border-color: var(--accent-blue);
+        }
+
+        .details-btn.about-btn {
+            color: var(--accent-green);
+            background: rgba(74, 222, 128, 0.1);
+            border-color: rgba(74, 222, 128, 0.35);
+        }
+
+        .details-btn.about-btn:hover {
+            background: rgba(74, 222, 128, 0.25);
+            border-color: var(--accent-green);
         }
 
         .cert-section {
@@ -330,6 +373,14 @@
             <h1 class="brand-title-appalachian">Appalachian</h1>
             <span class="brand-title-solutions">IT Solutions</span>
             <p class="brand-tagline">Your Trusted Local Technology Partner — For Residential & Small Businesses</p>
+            
+            <!-- HEADER NAVIGATION MENU -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="certified.html" class="nav-link">Certifications</a>
+                <a href="about.html" class="nav-link">About Me & My Mission</a>
+            </nav>
         </header>
 
         <div class="content-section">
@@ -419,7 +470,10 @@
 
                     <div class="details-btn-container">
                         <a href="services.html" class="details-btn">
-                            🔍 Click here to learn more about our services & solutions in greater detail! →
+                            🔍 Learn more about our services & solutions →
+                        </a>
+                        <a href="about.html" class="details-btn about-btn">
+                            👨‍💻 Learn more About Me & My Mission →
                         </a>
                     </div>
                 </div>
