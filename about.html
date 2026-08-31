@@ -258,6 +258,7 @@
             line-height: 1.55;
         }
 
+        /* FOOTER CTA STYLES */
         .footer-cta {
             background: linear-gradient(135deg, #0284c7 0%, #059669 100%);
             color: #ffffff;
@@ -278,12 +279,20 @@
 
         .cta-subtext {
             font-size: 0.95rem;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
             color: #e2e8f0;
         }
 
-        .cta-email {
-            font-size: 1.2rem;
+        .cta-contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .cta-btn {
+            font-size: 1.1rem;
             font-weight: 800;
             color: #ffffff;
             text-decoration: none;
@@ -293,9 +302,11 @@
             display: inline-block;
             border: 1px solid rgba(255,255,255,0.3);
             transition: background 0.2s;
+            width: 100%;
+            max-width: 380px;
         }
 
-        .cta-email:hover {
+        .cta-btn:hover {
             background: rgba(0, 0, 0, 0.4);
         }
 
@@ -378,11 +389,16 @@
             </div>
         </div>
 
-        <!-- FOOTER CTA -->
+        <!-- REVISED FOOTER CTA -->
         <div class="footer-cta">
             <div class="cta-heading">CONNECT WITH US FOR HONEST LOCAL SERVICE!</div>
             <div class="cta-subtext">We fix your tech headaches quickly so you don't have to. Reach out today for support or a consultation.</div>
-            <a href="mailto:ITAppySolutions@gmail.com" class="cta-email">📧 ITAppySolutions@gmail.com</a>
+            
+            <div class="cta-contacts">
+                <a href="mailto:info@itappalachiansolutions.dev" class="cta-btn">📧 info@itappalachiansolutions.dev</a>
+                <a href="tel:4232798788" class="cta-btn">📞 Call or Text Me At: 423-279-8788</a>
+            </div>
+
             <div class="spanish-note">🌐 *Servicios de asistencia técnica disponibles en Español e Inglés.*</div>
         </div>
     </div>
