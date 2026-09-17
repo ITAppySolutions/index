@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="website icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Impact of Cyber Threats on Small Business | Appalachian IT Solutions</title>
+
+    <meta property="og:title" content="What Viruses & Malware Can Do To Your Business">
+    <meta property="og:description" content="Learn the true cost of ransomware, malware, and cyber threats on local small businesses and how to protect yourself.">
+    <meta property="og:image" content="https://itappalachiansolutions.dev/Stressed%20Out.png">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --bg-fallback: #0f172a;
+            --overlay-bg: rgba(15, 23, 42, 0.92);
+            --border-color: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #cbd5e1;
+            --accent-green: #4ade80;
+            --accent-blue: #38bdf8;
+            --accent-red: #ef4444;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            min-height: 100vh;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            background-image: url('mobo01.jpg'); 
+            background-size: cover;          
+            background-position: center;     
+            background-attachment: fixed;    
+            background-repeat: no-repeat;
+            background-color: var(--bg-fallback);
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        /* HEADER STYLES */
+        header {
+            background: var(--overlay-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 25px 20px;
+            text-align: center;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+        }
+
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            background: rgba(56, 189, 248, 0.1);
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            transition: all 0.2s;
+        }
+
+        .nav-back:hover {
+            background: rgba(74, 222, 128, 0.15);
+            color: var(--accent-green);
+            border-color: rgba(74, 222, 128, 0.3);
+        }
+
+        .page-title {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            line-height: 1.3;
+        }
+
+        /* CONTENT STYLES */
+        .content-section {
+            background: var(--overlay-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-image-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 750px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: #e2e8f0;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .threat-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .threat-card {
+            background: rgba(30, 41, 59, 0.75);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-red);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .threat-card h3 {
+            color: #fca5a5;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .threat-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* FOOTER CTA STYLES */
+        .footer-cta {
+            background: linear-gradient(135deg, #0284c7 0%, #059669 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 28px 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .cta-heading {
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .cta-subtext {
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            color: #e2e8f0;
+        }
+
+        .cta-contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-btn {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 10px 22px;
+            border-radius: 8px;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: background 0.2s;
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .cta-btn:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <a href="index.html" class="nav-back">← Back to Home Page</a>
+            <h1 class="page-title">What Can Viruses, Malware, or Ransomware Do To Affect My Business?</h1>
+        </header>
+
+        <div class="content-section">
+            
+            <div class="hero-image-container">
+                <!-- IMPORTANT: Make sure your image file is named EXACTLY "Stressed Out.png" in your repository -->
+                <img src="Stressed Out.png" alt="Stressed small business owner dealing with a computer virus during payroll" class="hero-image">
+            </div>
+
+            <p class="intro-text">
+                Small businesses are the number one target for modern cybercriminals. When malicious software infiltrates your network, the consequences go far beyond a slow computer. Here is what is truly at risk:
+            </p>
+
+            <div class="threat-grid">
+                
+                <div class="threat-card">
+                    <h3>🛑 Complete Operational Downtime</h3>
+                    <p>When ransomware locks down your systems, your business halts. You can't process payroll, ring up customers, access inventory, or communicate with clients. Every hour your systems are locked is directly lost revenue.</p>
+                </div>
+
+                <div class="threat-card">
+                    <h3>💸 Financial Theft & Extortion</h3>
+                    <p>Keyloggers and banking trojans silently record your keystrokes, capturing passwords to your business bank accounts and merchant portals. Ransomware attackers will outright demand thousands of dollars in cryptocurrency just to hand your files back.</p>
+                </div>
+
+                <div class="threat-card">
+                    <h3>📁 Catastrophic Data Loss</h3>
+                    <p>Without properly isolated backups, a malware infection can permanently destroy your tax documents, client lists, invoices, and employee records. Recovering this information from scratch can take months of administrative work.</p>
+                </div>
+
+                <div class="threat-card">
+                    <h3>📉 Reputation & Client Trust Damage</h3>
+                    <p>If your system is compromised and leaks your clients' personal data (or sends spam/malware emails from your business address), the hardest thing to recover isn't your files—it's your reputation. Clients trust you to keep their information safe.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-cta">
+            <div class="cta-heading">DON'T WAIT FOR A BREACH TO PROTECT YOUR BUSINESS.</div>
+            <div class="cta-subtext">Appalachian IT Solutions provides proactive cybersecurity, managed backups, and network hardening to keep your business running smoothly and securely.</div>
+            
+            <div class="cta-contacts">
+                <a href="mailto:info@itappalachiansolutions.dev" class="cta-btn">📧 info@itappalachiansolutions.dev</a>
+                <a href="tel:4232798788" class="cta-btn">📞 Call or Text Me At: 423-279-8788</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
